@@ -1,0 +1,187 @@
+{
+  "all_attempts": 72,
+  "failures": [],
+  "original_4mbps_milp_readiness_median_ms": 2747.0500000000466,
+  "min_feasible_bytes": 891592,
+  "min_bytes_at_reference_quality": 1248072,
+  "cap_results": [
+    {
+      "cap_bytes": 891591,
+      "feasible_assignments": 0,
+      "attempts": 0,
+      "successes": 0,
+      "readiness": null,
+      "last_image_response": null,
+      "paired_vs_reference_median_ms": null,
+      "paired_valid_rounds": 0
+    },
+    {
+      "cap_bytes": 891592,
+      "feasible_assignments": 1,
+      "total_bytes": 891592,
+      "average_ssim": 0.9082614703356204,
+      "payload_estimate_ms": 1783.184,
+      "browser_case": "floor-min",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2032.3500000000058,
+        "q1_ms": 2028.550000000003,
+        "q3_ms": 2033.5250000000378,
+        "fastest_ms": 2026.399999999965
+      },
+      "last_image_response": {
+        "median_ms": 2021.4000000000233,
+        "q1_ms": 2020.6000000000058,
+        "q3_ms": 2021.550000000003,
+        "fastest_ms": 2018.7999999999884
+      },
+      "paired_vs_reference_median_ms": -713.3000000000175,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 900000,
+      "feasible_assignments": 1,
+      "total_bytes": 891592,
+      "average_ssim": 0.9082614703356204,
+      "payload_estimate_ms": 1783.184,
+      "browser_case": "floor-min",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2032.3500000000058,
+        "q1_ms": 2028.550000000003,
+        "q3_ms": 2033.5250000000378,
+        "fastest_ms": 2026.399999999965
+      },
+      "last_image_response": {
+        "median_ms": 2021.4000000000233,
+        "q1_ms": 2020.6000000000058,
+        "q3_ms": 2021.550000000003,
+        "fastest_ms": 2018.7999999999884
+      },
+      "paired_vs_reference_median_ms": -713.3000000000175,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 950000,
+      "feasible_assignments": 104,
+      "total_bytes": 948232,
+      "average_ssim": 0.914172729172224,
+      "payload_estimate_ms": 1896.464,
+      "browser_case": "cap-950000",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2138.5500000000175,
+        "q1_ms": 2136.975000000006,
+        "q3_ms": 2139.8499999999913,
+        "fastest_ms": 2135.7999999999884
+      },
+      "last_image_response": {
+        "median_ms": 2132.2999999999884,
+        "q1_ms": 2131.7999999999884,
+        "q3_ms": 2132.524999999994,
+        "fastest_ms": 2129.9000000000233
+      },
+      "paired_vs_reference_median_ms": -607.0500000000175,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 1000000,
+      "feasible_assignments": 864,
+      "total_bytes": 997334,
+      "average_ssim": 0.9187948589739605,
+      "payload_estimate_ms": 1994.668,
+      "browser_case": "cap-1000000",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2238.600000000006,
+        "q1_ms": 2237.4999999999854,
+        "q3_ms": 2239.9999999999854,
+        "fastest_ms": 2235.6999999999825
+      },
+      "last_image_response": {
+        "median_ms": 2231.399999999994,
+        "q1_ms": 2230.9749999999913,
+        "q3_ms": 2231.700000000026,
+        "fastest_ms": 2228.5
+      },
+      "paired_vs_reference_median_ms": -506.7499999999709,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 1125000,
+      "feasible_assignments": 9109,
+      "total_bytes": 1124302,
+      "average_ssim": 0.9287000872404982,
+      "payload_estimate_ms": 2248.604,
+      "browser_case": "cap-1125000",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2497.5,
+        "q1_ms": 2496.7250000000204,
+        "q3_ms": 2500.1250000000146,
+        "fastest_ms": 2494.3000000000466
+      },
+      "last_image_response": {
+        "median_ms": 2489.000000000029,
+        "q1_ms": 2488.8750000000146,
+        "q3_ms": 2489.2499999999563,
+        "fastest_ms": 2487.2000000000116
+      },
+      "paired_vs_reference_median_ms": -247.09999999999127,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 1200000,
+      "feasible_assignments": 24580,
+      "total_bytes": 1182652,
+      "average_ssim": 0.9332200669213524,
+      "payload_estimate_ms": 2365.304,
+      "browser_case": "cap-1200000",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2613.9500000000116,
+        "q1_ms": 2612.975000000006,
+        "q3_ms": 2614.675000000032,
+        "fastest_ms": 2612.2999999999884
+      },
+      "last_image_response": {
+        "median_ms": 2605.9999999999854,
+        "q1_ms": 2605.774999999994,
+        "q3_ms": 2606.300000000003,
+        "fastest_ms": 2605.600000000035
+      },
+      "paired_vs_reference_median_ms": -132.20000000001164,
+      "paired_valid_rounds": 12
+    },
+    {
+      "cap_bytes": 1250000,
+      "feasible_assignments": 41645,
+      "total_bytes": 1248072,
+      "average_ssim": 0.9332462799484161,
+      "payload_estimate_ms": 2496.144,
+      "browser_case": "reference",
+      "attempts": 12,
+      "successes": 12,
+      "readiness": {
+        "median_ms": 2745.75,
+        "q1_ms": 2745.2249999999913,
+        "q3_ms": 2746.024999999994,
+        "fastest_ms": 2743.2999999999884
+      },
+      "last_image_response": {
+        "median_ms": 2738.1999999999825,
+        "q1_ms": 2737.550000000003,
+        "q3_ms": 2738.32499999999,
+        "fastest_ms": 2735.1999999999534
+      },
+      "paired_vs_reference_median_ms": 0.0,
+      "paired_valid_rounds": 12
+    }
+  ]
+}

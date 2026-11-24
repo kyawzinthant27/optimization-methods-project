@@ -1,0 +1,38 @@
+{
+  "revision": "part1-milp-budget-sensitivity-v1",
+  "saved_at_utc": "2026-11-22T11:34:00.892747+00:00",
+  "question": "At 4 Mbps, how much mean SSIM is lost at a 2.00 s rather than 2.50 s modeled payload allowance?",
+  "manifest": "revisions/user-selected-v1/manifest.json",
+  "manifest_sha256": "bf9f685cfac6eddbf241e67f64023a599180a177c188d4d16323d92fab0ad42e",
+  "input_sha256": {
+    "revisions/user-selected-v1/manifest.json": "bf9f685cfac6eddbf241e67f64023a599180a177c188d4d16323d92fab0ad42e",
+    "revisions/user-selected-v1/config.json": "c580084ae98348ed85f1c292a19c5ac895d0086a8e174d103583d8151b6556af",
+    "revisions/user-selected-v1/freeze.json": "1bc37170b6d1856b78c679af6b229a17117cc3a2d74209c160adb35d1bb8298b",
+    "revisions/user-selected-v1/results/results.json": "7357df7c959305f769bc6a225c6ef1fd09d6ee6cfe91fa9228fc122d4716721e",
+    "revisions/part1-milp-ga-v1/plan.json": "3b32662dc79f7bd14a048743159a86b68007779ac16d04caca72a836604eec57",
+    "revisions/part1-milp-ga-v1/results/raw.json": "d439f70ef2ec2b76532ca23b9fea83d21b95fd5b8e6f1cd9a4671e71f21cba05",
+    "image_quality/optimize.py": "880f8c1f52476a89a11452b917060c047c10043a7e6c3d0ee72863b0ee4d077f"
+  },
+  "target_seconds": [
+    "2.00",
+    "2.25",
+    "2.50"
+  ],
+  "caps_bytes": [
+    1000000,
+    1125000,
+    1250000
+  ],
+  "match_tolerance": 1e-10,
+  "quality_row_scale": 1000000.0,
+  "solver": {
+    "presolve": true,
+    "mip_rel_gap": 0.0,
+    "time_limit": 60.0,
+    "disp": false
+  },
+  "method": "Reuse only proven primary optima with matching cap, manifest, floors, objective and settings; solve missing primary caps with unchanged image_quality.optimize.solve. Then minimize integer bytes subject to mean SSIM >= primary optimum - 1e-10. Report both statuses; independently validate full precision and enumerate all quality-eligible assignments. No GA calls.",
+  "inspection": "No implemented epsilon-budget sweep or existing secondary MILP tie-break found. Earlier course sweeps use other inputs and are not reused. The requested new secondary pass is isolated in this revision.",
+  "timing": "New primary call-to-return; historical primary solver time labeled reused; secondary milp call only. Input preparation, file I/O, independent checks and enumeration excluded. No runtime comparison claim.",
+  "preservation": "Never overwrite existing output. Hash all existing revision files before/after. No candidate regeneration or GA execution."
+}

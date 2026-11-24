@@ -1,0 +1,369 @@
+{
+  "saved_at_utc": "2026-11-24T14:11:59.150086+00:00",
+  "seeds": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007,
+    30008,
+    30009,
+    30010,
+    30011,
+    30012,
+    30013,
+    30014,
+    30015,
+    30016,
+    30017,
+    30018,
+    30019,
+    30020,
+    30021,
+    30022,
+    30023,
+    30024,
+    30025,
+    30026,
+    30027,
+    30028,
+    30029
+  ],
+  "warmup_seed": 930000,
+  "budget_bytes": 1250000,
+  "scenario_mbps": 4,
+  "target_mean_ssim": 0.9332462799484161,
+  "absolute_match_tolerance": 1e-10,
+  "fixed_ga": {
+    "population": 100,
+    "tournament": 3,
+    "crossover_probability": 0.8,
+    "mutation_probability": 0.1,
+    "elitism": 2
+  },
+  "schedule": [
+    [
+      30000,
+      100
+    ],
+    [
+      30000,
+      200
+    ],
+    [
+      30001,
+      200
+    ],
+    [
+      30001,
+      100
+    ],
+    [
+      30002,
+      100
+    ],
+    [
+      30002,
+      200
+    ],
+    [
+      30003,
+      200
+    ],
+    [
+      30003,
+      100
+    ],
+    [
+      30004,
+      100
+    ],
+    [
+      30004,
+      200
+    ],
+    [
+      30005,
+      200
+    ],
+    [
+      30005,
+      100
+    ],
+    [
+      30006,
+      100
+    ],
+    [
+      30006,
+      200
+    ],
+    [
+      30007,
+      200
+    ],
+    [
+      30007,
+      100
+    ],
+    [
+      30008,
+      100
+    ],
+    [
+      30008,
+      200
+    ],
+    [
+      30009,
+      200
+    ],
+    [
+      30009,
+      100
+    ],
+    [
+      30010,
+      100
+    ],
+    [
+      30010,
+      200
+    ],
+    [
+      30011,
+      200
+    ],
+    [
+      30011,
+      100
+    ],
+    [
+      30012,
+      100
+    ],
+    [
+      30012,
+      200
+    ],
+    [
+      30013,
+      200
+    ],
+    [
+      30013,
+      100
+    ],
+    [
+      30014,
+      100
+    ],
+    [
+      30014,
+      200
+    ],
+    [
+      30015,
+      200
+    ],
+    [
+      30015,
+      100
+    ],
+    [
+      30016,
+      100
+    ],
+    [
+      30016,
+      200
+    ],
+    [
+      30017,
+      200
+    ],
+    [
+      30017,
+      100
+    ],
+    [
+      30018,
+      100
+    ],
+    [
+      30018,
+      200
+    ],
+    [
+      30019,
+      200
+    ],
+    [
+      30019,
+      100
+    ],
+    [
+      30020,
+      100
+    ],
+    [
+      30020,
+      200
+    ],
+    [
+      30021,
+      200
+    ],
+    [
+      30021,
+      100
+    ],
+    [
+      30022,
+      100
+    ],
+    [
+      30022,
+      200
+    ],
+    [
+      30023,
+      200
+    ],
+    [
+      30023,
+      100
+    ],
+    [
+      30024,
+      100
+    ],
+    [
+      30024,
+      200
+    ],
+    [
+      30025,
+      200
+    ],
+    [
+      30025,
+      100
+    ],
+    [
+      30026,
+      100
+    ],
+    [
+      30026,
+      200
+    ],
+    [
+      30027,
+      200
+    ],
+    [
+      30027,
+      100
+    ],
+    [
+      30028,
+      100
+    ],
+    [
+      30028,
+      200
+    ],
+    [
+      30029,
+      200
+    ],
+    [
+      30029,
+      100
+    ]
+  ],
+  "order": "Alternates 100-first and 200-first, runs paired by seed.",
+  "timing": "Call-to-return of untouched solve_ga. Excludes validation and I/O.",
+  "source_hashes": {
+    "revisions/part1-milp-ga-v1/ga.py": "d6fd6345527ff319cce2c1a475c495dab02a110bdad46ce507c17be60d69db6c",
+    "revisions/part1-milp-ga-v1/experiment.py": "aa1230f32c1a98d15aafa035a15fd438ea3401a0da7576bc07a27dbf39136a85",
+    "revisions/part1-milp-ga-v1/plan.json": "3b32662dc79f7bd14a048743159a86b68007779ac16d04caca72a836604eec57",
+    "revisions/part1-milp-ga-v1/results/raw.json": "d439f70ef2ec2b76532ca23b9fea83d21b95fd5b8e6f1cd9a4671e71f21cba05",
+    "revisions/part1-milp-ga-v1/results/summary.json": "5529af4e040108ba2cca86c722bc345d089fd440f2d2ad1868bd1ca543fb5470",
+    "image_quality/optimize.py": "880f8c1f52476a89a11452b917060c047c10043a7e6c3d0ee72863b0ee4d077f",
+    "image_quality/common.py": "7d89d0281d55547ad146868138be21f29998860b9ac5d2b1a698e94614b3b9a2",
+    "course/run_ab.py": "95f6c7d88d009d64c7556e4854618236a750e501be376e7b507f0dec1fb67411",
+    "revisions/user-selected-v1/manifest.json": "bf9f685cfac6eddbf241e67f64023a599180a177c188d4d16323d92fab0ad42e",
+    "revisions/user-selected-v1/config.json": "c580084ae98348ed85f1c292a19c5ac895d0086a8e174d103583d8151b6556af",
+    "revisions/user-selected-v1/freeze.json": "1bc37170b6d1856b78c679af6b229a17117cc3a2d74209c160adb35d1bb8298b",
+    "revisions/part1-ga-sensitivity-v1/plan.json": "8d529ecba1c6501efac0e32696e2b919c4bf57524b300071a0d7f4797d9b183e",
+    "revisions/part1-ga-sensitivity-v1/results/raw.json": "68b4ddcbbca8a933062b40f18164cccceb8da671b17428764100a0ce3c419f82",
+    "revisions/part1-ga-generation-budget-v1/run.py": "e20c56fb08cd51a040bcf6976a3537b71b36f7dffc04388b625063c62dd11c23",
+    "revisions/user-selected-v1/candidates/0801-low.webp": "5004752d4e05ad5e06de67aea2135457b93cd1bd77f34d17b1ef284ae21620ca",
+    "revisions/user-selected-v1/candidates/0801-medium.webp": "25fbe463cc8b0e7398c3ea0566515569ac9a5bc2411d65e2d79c73dddc47455b",
+    "revisions/user-selected-v1/candidates/0801-high.webp": "3d8a5c43fa6e1ed997b97667c3553974d63a74cb46490f2ac2833c0c55909595",
+    "revisions/user-selected-v1/candidates/0803-low.webp": "13b60aa0714d5a47701ed4820ec6ed4a66a2b32da5b3e1587eb203275689eca6",
+    "revisions/user-selected-v1/candidates/0803-medium.webp": "9595c4a5f421b9963ff3f0154e01d12796b08b5e651e82ef17233fc15e819c53",
+    "revisions/user-selected-v1/candidates/0803-high.webp": "9674989f565053e0b77ebed8d4303facff7337f3a7272933ac9cfd83e96075e6",
+    "revisions/user-selected-v1/candidates/0807-low.webp": "752d18051e5e49f4f1bb34e03a5d48e28cb4e2ea999f8087ff4dc671edc460d9",
+    "revisions/user-selected-v1/candidates/0807-medium.webp": "36f42349b5321ba020a54c539fce8b7c3bfaed8181cc8f6da92d833531ac0de3",
+    "revisions/user-selected-v1/candidates/0807-high.webp": "89f3e905288bacbd12a3da7816f697c81d4379421633751b881ee7b3389c2f99",
+    "revisions/user-selected-v1/candidates/0808-low.webp": "0e76b886b4c9ea4bdb41defae374668b4f5de69ec1dbdc252630741176aa282b",
+    "revisions/user-selected-v1/candidates/0808-medium.webp": "c22a4fc3d83b3110aa29e814caa170ddd8fd9d8a3b31dcb19c90c5b518d301ae",
+    "revisions/user-selected-v1/candidates/0808-high.webp": "743116f1b865d31b8ed254c677c4ed0793cd7b091ad32ca4bb5f303a0261b71e",
+    "revisions/user-selected-v1/candidates/0810-low.webp": "a10c3a46031e8acae2eaa518fef2b79d4f69b8c19f2ebe38c12a01df2feb3523",
+    "revisions/user-selected-v1/candidates/0810-medium.webp": "e03a244ee1c62ab161303415d68c8f86b7ef0082211e2b187a89766e6859ec71",
+    "revisions/user-selected-v1/candidates/0810-high.webp": "e72a1c8d7a9bd11a2fb6ca2bbc55ad387be4ade330bd667e3bca6211366bdac3",
+    "revisions/user-selected-v1/candidates/0811-low.webp": "03de6c097dadfb78f6a5fce50503e3f1eb7a237c01e0e93582cbe05de0341244",
+    "revisions/user-selected-v1/candidates/0811-medium.webp": "edda742889f53ea716f171e0bfe5d37039a89b80f89ad121757c23c22ca82f7d",
+    "revisions/user-selected-v1/candidates/0811-high.webp": "bbfbea7c7ba23e2accc2fa1f3b3ec151da3f26c7167e5a41cd1edef13b319fc5",
+    "revisions/user-selected-v1/candidates/0814-low.webp": "6fd6a343f072b998f482bc4a74a67a7689f4ec5b13864ee38f749f61aed76439",
+    "revisions/user-selected-v1/candidates/0814-medium.webp": "1c24c7cb26b52db24d606e2a0d132fef96a3428bc0452673741e89c3b6dd7834",
+    "revisions/user-selected-v1/candidates/0814-high.webp": "423c4cfcefae8514ac317fca2da3ae7fd32a8d18f3db761c5ef35bf4cba73d40",
+    "revisions/user-selected-v1/candidates/0823-low.webp": "367677230961488d582e4930f8735721f709a2773824ef7721ac421584f31a8a",
+    "revisions/user-selected-v1/candidates/0823-medium.webp": "7b902d49b09b63654131a600d913acaa725762f4a4c66a648d95c7c2db9e6ad8",
+    "revisions/user-selected-v1/candidates/0823-high.webp": "75b3921c6d3990efafba8115194447113f56d76d61b4300d954b86e9e6d13908",
+    "revisions/user-selected-v1/candidates/0826-low.webp": "eb9d3e081b23ec2ec201783a5b6442daa16a27365a756457eb0f021a82455088",
+    "revisions/user-selected-v1/candidates/0826-medium.webp": "dd6924c9d4f4165b20ab116e7a3e7a5c8c16a7df525be4dfa8b82b342eb517e5",
+    "revisions/user-selected-v1/candidates/0826-high.webp": "c827945fd61dd7204afa0593c75df2fb77ee57fb783d298997ccb4643ced5467",
+    "revisions/user-selected-v1/candidates/0829-low.webp": "65acab35c051d4ab0fbfa563d553c1d9fe269c0c7702eb707c8a7685b9a4e7c6",
+    "revisions/user-selected-v1/candidates/0829-medium.webp": "47a59b378cdeb3b19710880de3de31aa18580a545f61b1dddb45523d1381d8da",
+    "revisions/user-selected-v1/candidates/0829-high.webp": "e1c79d8d661bedc026e5e81231405e88330c8865f6edce515befb11282eaf58b",
+    "revisions/user-selected-v1/candidates/0833-low.webp": "fb5da1333092f444f8bcd44a51dff474c242b6235b43de40e7e63dd367e829cd",
+    "revisions/user-selected-v1/candidates/0833-medium.webp": "3b4788eb8e5868291d5190b49eb7060f9c424283a62f0b90c4d84f6960c6d9c5",
+    "revisions/user-selected-v1/candidates/0833-high.webp": "f21e19eb95a03634822967180f66bbea1886b25b3a062a2817c3d8cfbc7dee18",
+    "revisions/user-selected-v1/candidates/0842-low.webp": "5fb06f1385384e1a4da1906f13068dbd46a5974e7b2d0cfc4e03d01c1f6e9a67",
+    "revisions/user-selected-v1/candidates/0842-medium.webp": "8fe78fde12c67c7d26823e2341caeb147bdd5925ca63327ab46cfcdaada55a84",
+    "revisions/user-selected-v1/candidates/0842-high.webp": "c5b6951b032a324a4eaf41a31c6bc19af63fb7de36bc40c3c6552b2d95cacaf2",
+    "revisions/user-selected-v1/candidates/0851-low.webp": "3204f24c455df19c9dba53c60b7a1556fd462178127c6a71cb25781c6fefe7f8",
+    "revisions/user-selected-v1/candidates/0851-medium.webp": "d2ab3f32790e459264566b54e7e7da2b71cd411ef18888ef40217b2c444c2e7d",
+    "revisions/user-selected-v1/candidates/0851-high.webp": "6d40f4150565a8f0e334de07f7bd38953838583cd0bf788bab5a81dca1897b58",
+    "revisions/user-selected-v1/candidates/0853-low.webp": "78123eadeca6677a85b964931023fdd65e223066580c60e248d6f9513edf4440",
+    "revisions/user-selected-v1/candidates/0853-medium.webp": "80a97e9a3629f684b887e0cb27d7bd0d5fe5d821f8c938d4539b1a5cb312becc",
+    "revisions/user-selected-v1/candidates/0853-high.webp": "1d1737088ec0fad51a14750c405778da6156d754a273d71211218731df6ddfe3"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "machine": "x86_64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logical_cpus": 20,
+    "packages": {
+      "numpy": "2.3.4",
+      "scipy": "1.16.3",
+      "scikit-image": "0.25.2",
+      "Pillow": "12.0.0",
+      "matplotlib": "3.10.7"
+    },
+    "highs": "1.8.0",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  }
+}

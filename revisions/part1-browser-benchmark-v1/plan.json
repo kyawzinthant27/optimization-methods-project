@@ -1,0 +1,39 @@
+{
+  "revision": "part1-browser-benchmark-v1",
+  "saved_at_utc": "2026-11-24T05:37:24.264253+00:00",
+  "question": "Browser loading of recorded Part 1 MILP versus original baseline GA selections at 4, 8, 12 Mbps.",
+  "repetitions": 30,
+  "networks_mbps": [
+    4,
+    8,
+    12
+  ],
+  "transfer_allowance_seconds": 2.5,
+  "latency_ms": 100,
+  "viewport": {
+    "width": 1440,
+    "height": 1100
+  },
+  "device_scale_factor": 1,
+  "cpu_throttle_rate": 1,
+  "timeout_ms": 30000,
+  "post_readiness_observation_ms": 1000,
+  "selections": "All original 30 recorded repetitions per method/network. Original baseline GA, not tuned GA. No solving during benchmark.",
+  "order": "For repetition 0..29 rotate network order by repetition modulo 3. MILP first on even repetitions, GA first on odd repetitions. 180 attempts, one load per saved trial. No retries or outcome-based exclusions.",
+  "pilot": "Three separate instrumentation loads: 4 Mbps MILP repetition0; first 4 Mbps nonmatching GA trial; 12 Mbps MILP repetition0. Excluded from formal summaries.",
+  "throttle": "Chrome CDP Network.emulateNetworkConditions, download/upload Mbps*1000000/8 bytes/s, latency100ms. Shared network emulation, not per-image bandwidth. Deprecated API explicitly used; no fallback.",
+  "cache": "New context per attempt; HTTP cache disabled/cleared; service workers blocked/bypassed; server no-store. OS/filesystem cache not cleared; startup hash validation warms files.",
+  "gallery": "All14 visible in viewport: seven columns, two rows, fixed190px image frames. Ascending ID, native eager fetching, async decode, auto priority, no preload/srcset/unused variants. Identical shell/CSS/dimensions.",
+  "metrics": "Navigation-origin image response completion, all-image decode readiness, FCP, last observed LCP with identity; first-image-start to response/decode spans. Readiness does not prove all pixels painted.",
+  "success": "Exactly14 selected requests, body bytes match manifest, HTTP200 completed, no cache, correct dimensions, decoded, visible stable layout, paint metrics present. Failures retained.",
+  "statistics": "Median and Q1/Q3 linear interpolation, failure counts, paired GA-minus-MILP readiness differences. Successful timing summaries plus all failure counts.",
+  "target": "2.5s is a modeled payload allowance, not guaranteed page speed. Count navigation-readiness and batch-readiness <=2500ms separately.",
+  "limits": "One batch/machine, localhost HTTP/1.1, headless Chrome with emulated throughput/latency. Separate from older offscreen pilot; no universal or real-world speed claim.",
+  "sources": [
+    "revisions/user-selected-v1/manifest.json",
+    "revisions/user-selected-v1/config.json",
+    "revisions/user-selected-v1/freeze.json",
+    "revisions/part1-milp-ga-v1/results/raw.json"
+  ],
+  "reference": "https://chromedevtools.github.io/devtools-protocol/tot/Network/"
+}

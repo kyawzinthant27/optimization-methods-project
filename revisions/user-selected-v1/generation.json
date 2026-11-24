@@ -1,0 +1,91 @@
+{
+  "started_from": "14 verified HR originals; no selection preview used",
+  "completed_at_utc": "2026-11-04T06:20:52.465361+00:00",
+  "config": {
+    "dataset_url": "https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip",
+    "image_ids": [
+      "0801",
+      "0803",
+      "0807",
+      "0808",
+      "0810",
+      "0811",
+      "0814",
+      "0823",
+      "0826",
+      "0829",
+      "0833",
+      "0842",
+      "0851",
+      "0853"
+    ],
+    "max_edge": 960,
+    "qualities": {
+      "low": 40,
+      "medium": 70,
+      "high": 95
+    },
+    "encoder": {
+      "lossless": false,
+      "method": 6,
+      "exact": true
+    },
+    "ordinary_threshold": 0.7,
+    "important_thresholds": {
+      "0801": 0.9,
+      "0803": 0.9,
+      "0829": 0.9,
+      "0853": 0.9
+    },
+    "network_mbps": [
+      4,
+      8,
+      12
+    ],
+    "transfer_seconds": "2.5",
+    "byte_cap": null,
+    "sweep_points": 21,
+    "solver": {
+      "presolve": true,
+      "mip_rel_gap": 0.0,
+      "time_limit": 60.0,
+      "disp": false
+    }
+  },
+  "ssim_settings": {
+    "channel_axis": -1,
+    "data_range": 255,
+    "win_size": 11,
+    "gaussian_weights": true,
+    "sigma": 1.5,
+    "use_sample_covariance": false,
+    "K1": 0.01,
+    "K2": 0.03
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logical_cpus": 20,
+    "packages": {
+      "Pillow": "12.0.0",
+      "numpy": "2.3.4",
+      "scipy": "1.16.3",
+      "scikit-image": "0.25.2"
+    },
+    "libwebp": "1.6.0",
+    "littlecms": "2.17",
+    "highs": "1.8.0",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "method_change": false,
+  "code_sha256": {
+    "image_quality/generate.py": "b4bc41619686eb5afae655962599b4eea2d912aa34474ae6c4e631f190c1fc26",
+    "image_quality/common.py": "7d89d0281d55547ad146868138be21f29998860b9ac5d2b1a698e94614b3b9a2",
+    "image_quality/optimize.py": "880f8c1f52476a89a11452b917060c047c10043a7e6c3d0ee72863b0ee4d077f"
+  }
+}

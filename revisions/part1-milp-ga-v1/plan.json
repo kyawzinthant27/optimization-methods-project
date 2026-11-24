@@ -1,0 +1,74 @@
+{
+  "revision": "part1-milp-ga-v1",
+  "scope": "Part 1 only: equal-weight mean SSIM maximization, MILP versus GA",
+  "source_pdf": "/home/kas/Downloads/ImageOptimization_Image+Quality+Optimization+Under... (1).PDF",
+  "dataset": "revisions/user-selected-v1",
+  "important_ids": [
+    "0801",
+    "0803",
+    "0829",
+    "0853"
+  ],
+  "important_floor": 0.9,
+  "ordinary_floor": 0.7,
+  "network_mbps": [
+    4,
+    8,
+    12
+  ],
+  "payload_allowance_seconds": "2.5",
+  "budgets_bytes": [
+    1250000,
+    2500000,
+    3750000
+  ],
+  "solver": {
+    "presolve": true,
+    "mip_rel_gap": 0.0,
+    "time_limit": 60.0,
+    "disp": false
+  },
+  "ga": {
+    "population": 100,
+    "tournament": 3,
+    "crossover_probability": 0.8,
+    "mutation_probability": 0.05,
+    "elitism": 2,
+    "generations": 200
+  },
+  "repetitions_per_method_per_scenario": 30,
+  "seed_rule": "GA final trial seed = 10000 + scenario_index*1000 + repetition_index; both indices start at zero; 90 distinct seeds",
+  "rng": "Python random.Random (Mersenne Twister), local instance per GA call",
+  "schedule": "For each repetition, rotate scenario order by repetition modulo 3; within each scenario alternate MILP/GA order by (repetition+scenario_index) modulo 2. Sequential execution.",
+  "warmups": "One excluded call per method per scenario; GA seeds 900000+scenario_index. No tuning or selection using warmup outcomes.",
+  "timing": "perf_counter_ns immediately before the optimization function call until return; includes method-specific setup, feasibility check, population/model construction, solving/search, and result extraction; excludes imports, input reading, shared hash validation, output writing, independent result validation and all image work. MILP's internal solver-only time is also saved separately.",
+  "ga_details": {
+    "encoding": "14 integer version indices in original image order; low=0, medium=1, high=2; only quality-eligible genes",
+    "initialization": "One minimum-byte feasible chromosome, ties by version order; 99 independently random eligible chromosomes, repaired if needed",
+    "selection": "Tournament of 3 sampled with replacement; highest equal-weight mean SSIM wins; exact score ties by lexicographically smaller chromosome",
+    "crossover": "Per mating pair probability 0.8; uniform independent 0.5 mask per gene; two complementary children",
+    "mutation": "Per gene probability 0.05; uniformly choose a different eligible version; singleton genes unchanged",
+    "repair": "At each step inspect all eligible strictly cheaper replacements, choose minimum (SSIM loss / bytes saved, image index, replacement version index); repeat until within budget. Allows zero or negative SSIM loss; never assumes monotonic bytes or SSIM.",
+    "replacement": "Copy best 2 chromosomes unchanged; produce 98 repaired offspring each generation; duplicates allowed; rank population on mean SSIM only, lexicographic chromosome tie-break",
+    "stopping": "Exactly 200 generations after initialization; no optimum-based early stop; no MILP solution/optimum provided to GA",
+    "counts": "Evaluate all 100 chromosomes at initialization and each generation: 20,100 fitness evaluations per full trial, including repeated chromosomes; preserve per-generation best score and distinct chromosome count"
+  },
+  "analysis": "Report every trial, failures, feasibility rate, best/median/worst GA SSIM, absolute and relative-percent gap to proven MILP optimum, optimum-match frequency at absolute SSIM tolerance 1e-10, selected bytes, unused bytes, runtime median/Q1/Q3 with NumPy linear quantiles. Include first-call warmups separately. A match does not make GA an optimality-proving algorithm.",
+  "tests": "Synthetic nonmonotonic repair, tie and singleton handling; infeasibility and units; deterministic seeded search; small exhaustive optimum comparison; independent checks of every final selection, quality floor, byte sum, objective, gap, status and preservation hashes",
+  "preservation": "Reuse frozen existing candidates without regenerating, reencoding or changing scores/floors. Snapshot hashes before running; verify after. Original PDF remains unchanged.",
+  "report_corrections": [
+    "Existing images were encoded using Pillow/libwebp, not the cwebp CLI",
+    "2.5 seconds is an assumed payload allowance, not measured page readiness",
+    "4,782,969 nominal choices; 1,062,882 after quality floors, before budget",
+    "Use new end-to-end optimization timings, not old solver-only times"
+  ],
+  "excluded": [
+    "Part 2",
+    "NSGA-II",
+    "multi-objective optimization",
+    "new image processing",
+    "browser benchmarking",
+    "GA parameter tuning"
+  ],
+  "saved_at_utc": "2026-11-20T11:17:37.487212+00:00"
+}

@@ -1,0 +1,149 @@
+{
+  "revision": "part1-ga-sensitivity-v1",
+  "saved_at_utc": "2026-11-20T13:23:33.855392+00:00",
+  "scope": "Post-hoc Part 1 GA parameter sensitivity, informed by the completed campaign; one factor at a time, not a full grid. No image work or new MILP solves.",
+  "dataset": "revisions/user-selected-v1",
+  "original_experiment": "revisions/part1-milp-ga-v1",
+  "scenario_mbps": 4,
+  "payload_allowance_seconds": "2.5",
+  "budget_bytes": 1250000,
+  "objective": "Maximize equal-weight mean full-precision SSIM over all 14 images",
+  "quality_floors": {
+    "important": 0.9,
+    "ordinary": 0.7,
+    "important_ids": [
+      "0801",
+      "0803",
+      "0829",
+      "0853"
+    ]
+  },
+  "fixed_ga": {
+    "population": 100,
+    "tournament": 3,
+    "crossover_probability": 0.8,
+    "mutation_probability": 0.05,
+    "elitism": 2,
+    "generations": 200
+  },
+  "configurations": [
+    {
+      "id": "baseline",
+      "mutation_probability": 0.05,
+      "elitism": 2
+    },
+    {
+      "id": "mutation_002",
+      "mutation_probability": 0.02,
+      "elitism": 2
+    },
+    {
+      "id": "mutation_010",
+      "mutation_probability": 0.1,
+      "elitism": 2
+    },
+    {
+      "id": "elitism_1",
+      "mutation_probability": 0.05,
+      "elitism": 1
+    },
+    {
+      "id": "elitism_4",
+      "mutation_probability": 0.05,
+      "elitism": 4
+    }
+  ],
+  "tuning_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019,
+    10020,
+    10021,
+    10022,
+    10023,
+    10024,
+    10025,
+    10026,
+    10027,
+    10028,
+    10029
+  ],
+  "fresh_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009,
+    20010,
+    20011,
+    20012,
+    20013,
+    20014,
+    20015,
+    20016,
+    20017,
+    20018,
+    20019,
+    20020,
+    20021,
+    20022,
+    20023,
+    20024,
+    20025,
+    20026,
+    20027,
+    20028,
+    20029
+  ],
+  "match_tolerance": 1e-10,
+  "milp_reference_ssim": 0.9332462799484161,
+  "expected_baseline_matches": 23,
+  "baseline_gate": "Run baseline 30 first using the same new wrapper and unchanged original solve_ga. Reuse these 30 as the baseline tuning row. Compare all deterministic fields including histories with original trials. Save diagnosis and stop if reproduction differs; never rerun failed seeds.",
+  "schedule": "Sequential. Baseline gate first; then the four non-baseline settings in cyclic order rotated by seed index, one run per setting per seed. Fresh evaluation alternates baseline/top-non-baseline order by seed index. Baseline timing is earlier than alternative-setting timings, a potential temporal confound.",
+  "warmups": "One excluded unchanged-GA call per configuration, seed 900000, before baseline gate; retain all outputs. Before fresh evaluation, one excluded call per selected configuration, seed 900001. Warmups are not tuning or final evaluation.",
+  "ranking": "Highest match count out of 30, then smallest mean absolute SSIM gap, then lowest median runtime_ms; exact residual ties by listed configuration order. Configurations with failed/infeasible runs remain reported but cannot advance to fresh evaluation.",
+  "fresh_evaluation": "Select highest-ranked non-baseline using only tuning outputs. Save selection before any fresh-seed runs. Run that setting and baseline with the same 30 predefined fresh seeds; retain every result even if improvement disappears.",
+  "timing": "perf_counter_ns immediately before unchanged solve_ga until it returns; milliseconds. Excludes imports, environment/input loading, shared hash checks, wrapper setup, validation, summaries, plotting and file I/O. Includes algorithm-specific feasibility check, RNG/population initialization, genetic search and result extraction, exactly the original routine timing scope.",
+  "invariants": "No changes to candidates, floors, budgets, objective, eligibility, initialization rule, tournament selection, uniform crossover, repair, population 100, 200 generations or 20100 evaluations. Only per-gene mutation and elite count vary. More/fewer elites necessarily change offspring and repair-call counts.",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "input_hashes": {
+    "revisions/part1-milp-ga-v1/ga.py": "d6fd6345527ff319cce2c1a475c495dab02a110bdad46ce507c17be60d69db6c",
+    "revisions/part1-milp-ga-v1/experiment.py": "aa1230f32c1a98d15aafa035a15fd438ea3401a0da7576bc07a27dbf39136a85",
+    "revisions/part1-milp-ga-v1/plan.json": "3b32662dc79f7bd14a048743159a86b68007779ac16d04caca72a836604eec57",
+    "revisions/part1-milp-ga-v1/results/raw.json": "d439f70ef2ec2b76532ca23b9fea83d21b95fd5b8e6f1cd9a4671e71f21cba05",
+    "revisions/part1-milp-ga-v1/results/summary.json": "5529af4e040108ba2cca86c722bc345d089fd440f2d2ad1868bd1ca543fb5470",
+    "image_quality/optimize.py": "880f8c1f52476a89a11452b917060c047c10043a7e6c3d0ee72863b0ee4d077f",
+    "image_quality/common.py": "7d89d0281d55547ad146868138be21f29998860b9ac5d2b1a698e94614b3b9a2",
+    "course/run_ab.py": "95f6c7d88d009d64c7556e4854618236a750e501be376e7b507f0dec1fb67411",
+    "revisions/user-selected-v1/manifest.json": "bf9f685cfac6eddbf241e67f64023a599180a177c188d4d16323d92fab0ad42e",
+    "revisions/user-selected-v1/config.json": "c580084ae98348ed85f1c292a19c5ac895d0086a8e174d103583d8151b6556af",
+    "revisions/user-selected-v1/freeze.json": "1bc37170b6d1856b78c679af6b229a17117cc3a2d74209c160adb35d1bb8298b"
+  },
+  "limitations": "One image batch, one budget, post-hoc tuning. Fresh results are a limited same-problem check, not generalization to other budgets/data, statistical significance, or browser-speed evidence."
+}

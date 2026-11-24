@@ -1,0 +1,51 @@
+{
+  "dataset_url": "https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip",
+  "image_ids": [
+    "0801",
+    "0803",
+    "0807",
+    "0808",
+    "0810",
+    "0811",
+    "0814",
+    "0823",
+    "0826",
+    "0829",
+    "0833",
+    "0842",
+    "0851",
+    "0853"
+  ],
+  "max_edge": 960,
+  "qualities": {
+    "low": 40,
+    "medium": 70,
+    "high": 95
+  },
+  "encoder": {
+    "lossless": false,
+    "method": 6,
+    "exact": true
+  },
+  "ordinary_threshold": 0.7,
+  "important_thresholds": {
+    "0801": 0.9,
+    "0803": 0.9,
+    "0829": 0.9,
+    "0853": 0.9
+  },
+  "network_mbps": [
+    4,
+    8,
+    12
+  ],
+  "transfer_seconds": "2.5",
+  "byte_cap": null,
+  "sweep_points": 21,
+  "solver": {
+    "presolve": true,
+    "mip_rel_gap": 0.0,
+    "time_limit": 60.0,
+    "disp": false
+  }
+}

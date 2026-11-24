@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "generations": 100,
+      "trials": 30,
+      "feasible": 30,
+      "matches": 30,
+      "miss_seeds": [],
+      "median_runtime_ms": 71.7813505,
+      "worst_mean_ssim_gap": 0.0,
+      "latest_first_match_generation": 30,
+      "fitness_evaluations_per_trial": 10100
+    },
+    {
+      "generations": 200,
+      "trials": 30,
+      "feasible": 30,
+      "matches": 30,
+      "miss_seeds": [],
+      "median_runtime_ms": 142.059132,
+      "worst_mean_ssim_gap": 0.0,
+      "latest_first_match_generation": 30,
+      "fitness_evaluations_per_trial": 20100
+    }
+  ],
+  "all_source_hashes_unchanged": true,
+  "all_30_paired_history_prefixes_match": true,
+  "median_runtime_reduction_pct": 49.47079466880031,
+  "median_paired_runtime_saving_ms": 70.12088450000002,
+  "seeds_rescued_after_generation_100": []
+}

@@ -1,0 +1,4 @@
+target_seconds,byte_cap,status,bytes_used,unused_bytes,optimal_mean_ssim,selected_mean_ssim,ssim_loss_vs_2_50,quality_loss_in_tiebreak,primary_origin,primary_new_call_ms,primary_saved_solver_ms
+2.00,1000000,optimal,997334,2666,0.9187948589739605,0.9187948589739605,0.01445142097445562,0.0,reused_proven_optimum,,5.586491999565624
+2.25,1125000,optimal,1124302,698,0.9287000872404982,0.9287000872404982,0.004546192707917895,0.0,fresh_existing_MILP,3.551191,3.2739700000092853
+2.50,1250000,optimal,1248072,1928,0.9332462799484161,0.9332462799484161,0.0,0.0,reused_proven_optimum,,7.536565000918927
